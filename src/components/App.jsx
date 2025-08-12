@@ -5,6 +5,7 @@ import SearchBar from "./SearchBar";
 
 function App() {
   const [tasks, setTasks] = useState([]);
+  
 
   useEffect(() => {
     fetch('http://localhost:6001/tasks')
