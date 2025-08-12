@@ -12,6 +12,11 @@ function TaskForm() {
   function handleSubmit(e) {
     e.preventDefault();
     if (taskName.trim() === "") return;
+    const newTask = {
+      title: taskName,
+      completed: false
+    };
+    setTasks((prevTasks) => [...prevTasks, newTask]);
     setTaskName("");
   }
   
